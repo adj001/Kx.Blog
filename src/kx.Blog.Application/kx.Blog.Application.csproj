@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>kx.Blog.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="2.9.0" />
+    <ProjectReference Include="..\kx.Blog.Domain.Shared\kx.Blog.Domain.Shared.csproj" />
+    <ProjectReference Include="..\kx.Blog.Application.Contracts\kx.Blog.Application.Contracts.csproj" />
+    <ProjectReference Include="..\kx.Blog.Application.Caching\kx.Blog.Application.Caching.csproj" />
+  </ItemGroup>
+
+</Project>

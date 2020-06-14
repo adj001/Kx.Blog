@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>kx.Blog.Application.Caching</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Caching" Version="2.9.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\kx.Blog.Application.Contracts\kx.Blog.Application.Contracts.csproj" />
+    <ProjectReference Include="..\kx.Blog.Domain.Shared\kx.Blog.Domain.Shared.csproj" />
+    <ProjectReference Include="..\kx.Blog.Domain\kx.Blog.Domain.csproj" />
+    <ProjectReference Include="..\kx.Blog.ToolKits\kx.Blog.ToolKits.csproj" />
+  </ItemGroup>
+</Project>
