@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Swashbuckle.AspNetCore.SwaggerUI;
-
+using Microsoft.OpenApi.Models;
 
 namespace kx.Blog.Swagger
 {
@@ -16,7 +16,7 @@ namespace kx.Blog.Swagger
         {
             return services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version="1.0.0",
                     Title="我的接口啊",

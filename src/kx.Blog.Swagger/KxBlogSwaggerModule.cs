@@ -12,7 +12,8 @@ namespace kx.Blog.Swagger
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            base.ConfigureServices(context);
+            //base.ConfigureServices(context);
+            context.Services.AddSwagger();
         }
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
         {

@@ -14,7 +14,7 @@ namespace kx.Blog.HttpApi.Hosting
         typeof(AbpAspNetCoreMvcModule),
         typeof(AbpAutofacModule),
         typeof(KxBlogHttpApiModule),
-        //typeof(KxBlogSwaggerModule),
+        typeof(KxBlogSwaggerModule),
         typeof(KxBlogFrameworkCoreModule)
         )]
     public class KxBlogHttpApiHostingModule : AbpModule
