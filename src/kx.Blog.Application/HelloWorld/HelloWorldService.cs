@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace kx.Blog.Application.HelloWorld
 {
-    public class HelloWorldServeice : ServiceBase, IHelloWorldService
+    public class HelloWorldService : ServiceBase, IHelloWorldService
     {
-        public async Task<string> HelloWorld()
+        public string HelloWorld()
         {
-            return await Task.FromResult("Hello World !!!");
+            return "Hello World !!!";
         }
     }
 }

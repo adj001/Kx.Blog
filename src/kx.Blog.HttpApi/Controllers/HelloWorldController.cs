@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using kx.Blog.Application.HelloWorld;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
@@ -17,10 +18,9 @@ namespace kx.Blog.HttpApi.Controllers
         }
 
         [HttpGet]
-        public string SayHello()
+        public string HelloWorld()
         {
-            return "Hello world";
-            //return _helloWorldService.HelloWorld();
+            return _helloWorldService.HelloWorld();
         }
     }
 }

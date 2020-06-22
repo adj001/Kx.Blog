@@ -7,6 +7,6 @@ namespace kx.Blog.Application.HelloWorld
 {
     public interface IHelloWorldService
     {
-        Task<string> HelloWorld();
+        string HelloWorld();
     }
 }
