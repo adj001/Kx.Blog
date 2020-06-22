@@ -6,4 +6,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>kx.Blog.Domain.Shared</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Identity.Domain.Shared" Version="2.9.0" />
+  </ItemGroup>
 </Project>

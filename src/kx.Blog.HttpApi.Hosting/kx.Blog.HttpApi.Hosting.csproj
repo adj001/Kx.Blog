@@ -8,9 +8,15 @@
   </PropertyGroup>
   
   <ItemGroup>
+    <ProjectReference Include="..\kx.Blog.BackgroundJobs\kx.Blog.BackgroundJobs.csproj" />
+    <ProjectReference Include="..\kx.Blog.Domain.Shared\kx.Blog.Domain.Shared.csproj" />
     <ProjectReference Include="..\kx.Blog.EntityFrameworkCore\kx.Blog.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\kx.Blog.HttpApi\kx.Blog.HttpApi.csproj" />
     <ProjectReference Include="..\kx.Blog.Swagger\kx.Blog.Swagger.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Volo.Abp.Autofac" Version="2.9.0" />
   </ItemGroup>
 

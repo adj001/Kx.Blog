@@ -4,5 +4,115 @@
         <name>kx.Blog.Domain</name>
     </assembly>
     <members>
+        <member name="T:kx.Blog.Domain.Configurations.AppSettings">
+            <summary>
+            appsettings.json配置文件数据读取类
+            </summary>
+        </member>
+        <member name="F:kx.Blog.Domain.Configurations.AppSettings._configurationRoot">
+            <summary>
+            配置文件的根节点
+            </summary>
+        </member>
+        <member name="T:kx.Blog.Domain.Entities.Category">
+            <summary> 
+            Category 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Category.CategoryName">
+            <summary> 
+            分类名称 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Category.DisplayName">
+            <summary> 
+            展示名称 
+            </summary> 
+        </member>
+        <member name="T:kx.Blog.Domain.Entities.FriendLink">
+            <summary> 
+            FriendLink 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.FriendLink.Title">
+            <summary> 
+            标题 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.FriendLink.LinkUrl">
+            <summary> 
+            链接 
+            </summary> 
+        </member>
+        <member name="T:kx.Blog.Domain.Entities.Post">
+            <summary> 
+            Post 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Post.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Post.Author">
+            <summary>  
+            作者  
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Post.Url">
+            <summary> 
+            链接
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Post.Html">
+            <summary> 
+            HTML 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Post.Markdown">
+            <summary> 
+            Markdown 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Post.CategoryId">
+            <summary> 
+            分类Id 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Post.CreationTime">
+            <summary> 
+            创建时间 
+            </summary> 
+        </member>
+        <member name="T:kx.Blog.Domain.Entities.PostTag">
+            <summary> 
+            PostTag 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.PostTag.PostId">
+            <summary> 
+            文章Id 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.PostTag.TagId">
+            <summary> 
+            标签Id 
+            </summary> 
+        </member>
+        <member name="T:kx.Blog.Domain.Entities.Tag">
+            <summary> 
+            Tag 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Tag.TagName">
+            <summary> 
+            标签名称 
+            </summary> 
+        </member>
+        <member name="P:kx.Blog.Domain.Entities.Tag.DisplayName">
+            <summary> 
+            展示名称 
+            </summary> 
+        </member>
     </members>
 </doc>
