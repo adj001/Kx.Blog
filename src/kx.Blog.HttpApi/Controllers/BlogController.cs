@@ -8,9 +8,11 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 using Volo.Abp.AspNetCore.Mvc;
+using static kx.Blog.Domain.Shared.KxBlogConsts;
 
 namespace kx.Blog.HttpApi.Controllers
 {
+    [ApiExplorerSettings(GroupName = ApiGrouping.GroupNameV1)]
     [ApiController]
     [Route("[controller]")]
     public class BlogController : AbpController
@@ -38,7 +40,7 @@ namespace kx.Blog.HttpApi.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete]
-        public async Task<ServiceResult> DeletePostAsync([Required(ErrorMessage ="ID不能为空")]int id)
+        public async Task<ServiceResult> DeletePostAsync([Required(ErrorMessage = "ID不能为空")] int id)
         {
             return await _blogService.DeletePostAsync(id);
         }
@@ -50,7 +52,7 @@ namespace kx.Blog.HttpApi.Controllers
         /// <param name="postDto"></param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<ServiceResult<string>> UpdatePostAsync([Required(ErrorMessage ="ID不能为空")] int id,[FromBody] PostDto postDto)
+        public async Task<ServiceResult<string>> UpdatePostAsync([Required(ErrorMessage = "ID不能为空")] int id, [FromBody] PostDto postDto)
         {
             return await _blogService.UpdatePostAsync(id, postDto);
         }
@@ -61,7 +63,7 @@ namespace kx.Blog.HttpApi.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<ServiceResult<PostDto>> GetPostAsync([Required(ErrorMessage = "ID不能为空")]int id)
+        public async Task<ServiceResult<PostDto>> GetPostAsync([Required(ErrorMessage = "ID不能为空")] int id)
         {
             return await _blogService.GetPostAsync(id);
         }

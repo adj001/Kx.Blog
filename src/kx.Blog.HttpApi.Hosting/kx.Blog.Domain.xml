@@ -14,6 +14,11 @@
             配置文件的根节点
             </summary>
         </member>
+        <member name="P:kx.Blog.Domain.Configurations.AppSettings.ApiVersion">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:kx.Blog.Domain.Entities.Category">
             <summary> 
             Category 

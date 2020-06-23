@@ -3,10 +3,11 @@ using System.Threading.Tasks;
 using kx.Blog.Application.HelloWorld;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
+using static kx.Blog.Domain.Shared.KxBlogConsts;
 
 namespace kx.Blog.HttpApi.Controllers
 {
-
+    [ApiExplorerSettings(GroupName =ApiGrouping.GroupNameV3)]
     [ApiController]
     [Route("[controller]")]
     public class HelloWorldController : AbpController

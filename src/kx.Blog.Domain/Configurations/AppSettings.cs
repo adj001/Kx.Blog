@@ -25,5 +25,10 @@ namespace kx.Blog.Domain.Configurations
         public static string EnableDb => _configurationRoot["ConnectionStrings:Enable"];
 
         public static string ConnectionStrings => _configurationRoot.GetConnectionString(EnableDb);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static string ApiVersion => _configurationRoot["ApiVersion"];
     }
 }
