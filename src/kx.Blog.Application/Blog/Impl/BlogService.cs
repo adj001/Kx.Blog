@@ -1,6 +1,7 @@
 ﻿using kx.Blog.Application.Contracts.Blog;
 using kx.Blog.Domain.Entities;
 using kx.Blog.Domain.Repositories;
+using kx.Blog.ToolKits.Base;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,20 +18,23 @@ namespace kx.Blog.Application.Blog.Impl
             _postRepository = postRepository;
         }
 
-        public async Task<bool> DeletePostAsync(int id)
+        public async Task<ServiceResult> DeletePostAsync(int id)
         {
+            var result = new ServiceResult();
             await _postRepository.DeleteAsync(id);
-            return await Task.FromResult(true);
+            return result;
         }
 
-        public async Task<PostDto> GetPostAsync(int id)
+        public async Task<ServiceResult<PostDto>> GetPostAsync(int id)
         {
+            var result = new ServiceResult<PostDto>();
             var entity = await _postRepository.GetAsync(id);
             if (entity == null)
             {
-                throw new Exception($"不存在ID为{id}的博客记录");
+                result.IsFailed("文章不存在");
+                return result;
             }
-            return new PostDto
+            var dto = new PostDto
             {
                 Title = entity.Title,
                 Author = entity.Author,
@@ -40,10 +44,13 @@ namespace kx.Blog.Application.Blog.Impl
                 CategoryId = entity.CategoryId,
                 CreationTime = entity.CreationTime
             };
+            result.IsSuccess(dto);
+            return result;
         }
 
-        public async Task<bool> InsertPostAsync(PostDto dto)
+        public async Task<ServiceResult<string>> InsertPostAsync(PostDto dto)
         {
+            var result = new ServiceResult<string>();
             var entity = new Post
             {
                 Title = dto.Title,
@@ -55,15 +62,25 @@ namespace kx.Blog.Application.Blog.Impl
                 CreationTime = dto.CreationTime
             };
             var post = await _postRepository.InsertAsync(entity);
-            return post != null;
+            if (post == null)
+            {
+                result.IsFailed("添加失败");
+            }
+            else
+            {
+                result.IsSuccess("添加成功");
+            }
+            return result;
         }
 
-        public async Task<bool> UpdatePostAsync(int id, PostDto dto)
+        public async Task<ServiceResult<string>> UpdatePostAsync(int id, PostDto dto)
         {
+            var result = new ServiceResult<string>();
             var entity = await _postRepository.GetAsync(id);
-            if(entity==null)
+            if (entity == null)
             {
-                throw new Exception($"不存在ID为{id}的博客记录");
+                result.IsFailed("文章不存在");
+                return result;
             }
             entity.Title = dto.Title;
             entity.Author = dto.Author;
@@ -73,7 +90,8 @@ namespace kx.Blog.Application.Blog.Impl
             entity.CategoryId = dto.CategoryId;
             entity.CreationTime = dto.CreationTime;
             await _postRepository.UpdateAsync(entity);
-            return await Task.FromResult(true);
+            result.IsSuccess("更新成功");
+            return result;
         }
     }
 }
