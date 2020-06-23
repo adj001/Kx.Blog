@@ -30,5 +30,21 @@ namespace kx.Blog.Domain.Configurations
         /// 
         /// </summary>
         public static string ApiVersion => _configurationRoot["ApiVersion"];
+
+        public static class GitHub
+        {
+            public static int UserId => Convert.ToInt32(_configurationRoot["Github:UserId"]);
+            public static string ClientId => _configurationRoot["Github:ClientId"];
+            public static string ClientSecret => _configurationRoot["Github:ClientSecret"];
+            public static string RedirectUri => _configurationRoot["Github:RedirectUri"];
+            public static string ApplicationName => _configurationRoot["Github:ApplicationName"];
+        }
+
+        public static class JWT
+        {
+            public static string Domain = _configurationRoot["JWT:Domain"];
+            public static string SecurityKey = _configurationRoot["JWT:SecurityKey "];
+            public static int Expires = Convert.ToInt32(_configurationRoot["JWT:Expires"]);
+        }
     }
 }

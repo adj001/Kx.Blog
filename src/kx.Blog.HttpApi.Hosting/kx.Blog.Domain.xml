@@ -19,6 +19,46 @@
             
             </summary>
         </member>
+        <member name="F:kx.Blog.Domain.Configurations.GithubConfig.ApiAuthorize">
+            <summary>
+            GET请求，跳转GitHub登录界面，获取用户授权，得到code
+            </summary>
+        </member>
+        <member name="F:kx.Blog.Domain.Configurations.GithubConfig.ApiAccessToken">
+            <summary>
+            POST请求，根据code得到access_token
+            </summary>
+        </member>
+        <member name="F:kx.Blog.Domain.Configurations.GithubConfig.ApiUser">
+            <summary>
+            GET请求，根据access_token得到用户信息
+            </summary>
+        </member>
+        <member name="F:kx.Blog.Domain.Configurations.GithubConfig.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:kx.Blog.Domain.Configurations.GithubConfig.ClientId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:kx.Blog.Domain.Configurations.GithubConfig.ClientSecret">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:kx.Blog.Domain.Configurations.GithubConfig.RedirectUri">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:kx.Blog.Domain.Configurations.GithubConfig.ApplicationName">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:kx.Blog.Domain.Entities.Category">
             <summary> 
             Category 

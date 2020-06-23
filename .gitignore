@@ -258,3 +258,4 @@ src/kx.Blog.IdentityServer/Logs/*
 src/kx.Blog.HttpApi.Host/Logs/*
 src/kx.Blog.HttpApi.HostWithIds/Logs/*
 src/kx.Blog.DbMigrator/Logs/*
+src/kx.Blog.HttpApi.Hosting/Logs/*
