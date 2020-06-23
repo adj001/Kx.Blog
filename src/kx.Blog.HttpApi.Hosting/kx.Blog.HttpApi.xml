@@ -4,5 +4,34 @@
         <name>kx.Blog.HttpApi</name>
     </assembly>
     <members>
+        <member name="M:kx.Blog.HttpApi.Controllers.BlogController.InsertPostAsync(kx.Blog.Application.Contracts.Blog.PostDto)">
+            <summary>
+            添加博客
+            </summary>
+            <param name="postDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:kx.Blog.HttpApi.Controllers.BlogController.DeletePostAsync(System.Int32)">
+            <summary>
+            删除博客
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:kx.Blog.HttpApi.Controllers.BlogController.UpdatePostAsync(System.Int32,kx.Blog.Application.Contracts.Blog.PostDto)">
+            <summary>
+            更新博客
+            </summary>
+            <param name="id">博客ID</param>
+            <param name="postDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:kx.Blog.HttpApi.Controllers.BlogController.GetPostAsync(System.Int32)">
+            <summary>
+            查询博客
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

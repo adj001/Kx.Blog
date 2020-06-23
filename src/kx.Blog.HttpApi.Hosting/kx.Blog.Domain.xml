@@ -114,5 +114,19 @@
             展示名称 
             </summary> 
         </member>
+        <member name="M:kx.Blog.Domain.Repositories.IPostTagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{kx.Blog.Domain.Entities.PostTag})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="postTags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:kx.Blog.Domain.Repositories.ITagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{kx.Blog.Domain.Entities.Tag})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="postTags"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
