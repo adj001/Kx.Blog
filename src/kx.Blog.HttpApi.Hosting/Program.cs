@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using kx.Blog.ToolKits;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
@@ -10,9 +11,10 @@ namespace kx.Blog.HttpApi.Hosting
         public static async Task Main(string[] args)
         {
             await Host.CreateDefaultBuilder(args)
+                      .UseLog4Net()
                       .ConfigureWebHostDefaults(builder =>
                       {
-                          builder
+                          builder.UseIISIntegration()
                                   .UseStartup<Startup>();
                       }).UseAutofac().Build().RunAsync();
         }
